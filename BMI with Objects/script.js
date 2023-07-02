@@ -20,19 +20,28 @@ var chamal = new Object();
 kasun.fullName = prompt("What is Kasun full name? ");
 kasun.mass = parseInt(prompt("What is " + kasun.fullName + " mass ? "));
 kasun.hight = parseInt(prompt("What is " + kasun.fullName + " hight ? "));
-kasun.bmi = bmi(kasun.mass, kasun.hight);
-console.log(kasun.bmi);
 
 // Add properties to chamal
-chamal.fullName = prompt("What is Kasun full name? ");
+chamal.fullName = prompt("What is Chamal full name? ");
 chamal.mass = parseInt(prompt("What is " + chamal.fullName + " mass ? "));
 chamal.hight = parseInt(prompt("What is " + chamal.fullName + " hight ? "));
-chamal.bmi = bmi(chamal.mass, chamal.hight);
-console.log(chamal.bmi);
 
-// Calculate BMI Function
-function bmi (mass, hight){
-    return mass/(hight**2);
+kasun.bmi = chamal.bmi = function(){
+    this.bmiVal = this.mass/(this.hight**2);
+    return this.bmiVal;
 }
 
-  
+if(kasun.bmi() > chamal.bmi()){
+    alert(kasun.fullName+" has the highest BMI : "+kasun.bmiVal);
+}
+else if(kasun.bmi() < chamal.bmi()){
+    alert(chamal.fullName+" has the highest BMI : "+chamal.bmiVal);
+}
+else{
+    alert("Both BMI are equal!");
+}
+
+console.log(kasun);
+console.log(chamal);
+
+
