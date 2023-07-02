@@ -35,13 +35,4 @@ function bmi (mass, hight){
     return mass/(hight**2);
 }
 
-// display Hights BMI
-if(kasun.bmi > chamal.bmi){
-    alert(kasun.fullName + " BMI greater than Chamals BMI. highest | BMI: " + kasun.bmi);
-}
-else if(kasun.bmi < chamal.bmi){
-    alert(chamal.fullName + " BMI greater than "+ kasun.fullName +" | BMI. highest Bmi: " + chamal.bmi);
-}
-else{
-    alert(chamal.fullName+ " BMI same "+ kasun.fullName +" | BMI. Bmi: " + chamal.bmi);
-}   
+  
